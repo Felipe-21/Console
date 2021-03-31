@@ -3,6 +3,6 @@ from time import sleep
 
 
 system("Title FarShell Commander - Sen Kiudokima")
-system("Far")
+system("Far.exe")
 system("cmd")
 system("cls")
