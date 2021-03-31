@@ -1,5 +1,8 @@
 from os import system
+from time import sleep
 
-if __name__ == "__main__":
-system("title Far Commander")
-system("")
+
+system("Title FarShell Commander - Sen Kiudokima")
+system("Far")
+system("cmd")
+system("cls")
