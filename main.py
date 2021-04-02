@@ -323,13 +323,13 @@ def shell():
                 pafer = str(input("Path to extract: "))
                 Ethernet.download(rota, pafer)
             elif cmd == "cpi":
-                Cmds.cpi()
+                Cmds.cpi("")
                 continue
             elif cmd == "help":
                 Cmds.helpy()
                 continue
             elif cmd == "mode":
-                Cmds.mode()
+                Cmds.mode("")
                 continue
             elif cmd.startswith("echo"):
                 cmd = cmd.replace("echo ", "")
@@ -344,7 +344,7 @@ def shell():
                 cmd = cmd.replace("edit", "")
                 Cmds.Edit(cmd)
             elif cmd == "cls":
-                Cmds.clear()
+                Cmds.clear("")
                 continue
             elif cmd.startswith("lynx"):
                 cmd = cmd.replace("lynx ", "")
