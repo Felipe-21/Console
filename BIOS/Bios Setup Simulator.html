@@ -1,0 +1,1018 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0040)https://paulotec.com.br/setup/setup.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="StyleSheet" href="./Bios Setup Simulator_files/bios.css" type="text/css">
+<title>Bios Setup Simulator </title>
+<script language="JavaScript" type="text/javascript">
+
+
+if (window.Event)
+{
+document.captureEvents(Event.KEYDOWN); document.onkeydown = setkey;
+}
+else
+{
+document.onkeydown = function()
+{
+return setkey(event);
+}
+}
+
+function setkey(event)
+{
+
+// alert(event.which);
+if (event.which == 27) {
+ document.getElementById("menu1").style.display = "none";
+ document.getElementById("menu2").style.display = "none";
+ document.getElementById("menu3").style.display = "none";
+ document.getElementById("menu4").style.display = "none";
+ document.getElementById("menu5").style.display = "none";
+ document.getElementById("menu").style.display = "block";
+ menu = "menu";
+}
+
+ if (event.which == 121 || event.which == 116 || event.which == 112) {
+// 	submit();
+}
+
+}
+
+var menu = "menu";
+
+function display(id) {
+
+document.getElementById(id).style.display = "block";
+document.getElementById(menu).style.display = "none";
+document.lomake.kuukausi.focus();
+menu = id;
+
+}
+
+function submit() {
+
+document.lomake.submit();
+
+}
+
+</script>
+
+</head>
+<body>
+
+<div id="menu" class="bios" style="display: none;">
+<h2>Phoenix - AwardBios CMOS Setup Utility </h2>
+
+<div class="border">
+<div class="left">
+<ul>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu1&quot;)">Standard CMOS Features</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu2&quot;)">Advanced BIOS Features</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu3&quot;)">Advanced Chipset Features</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu4&quot;)">Integrated Peripherals</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu5&quot;)">Power Management Setup</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu6&quot;)">Pnp/PCI Configurations</a></li>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu7&quot;)">PC Health Status</a></li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu8&quot;)">Frequency/Voltage Control</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu9&quot;)">Load Fail-Safe Defaults</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu10&quot;)">Load Optimized Defaults</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu11&quot;)">Set Supervisor Password</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu12&quot;)">Set User Password</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="submit()">Save &amp; Exit Setup</a></li>
+<li class="no"><a href="https://paulotec.com.br/setup/setup.html#" onclick="display(&quot;menu14&quot;)">Exit Withour Saving</a></li>
+</ul>
+</div>
+<div class="bottom">
+<div class="l">
+<ul>
+<li>Esc: Quit</li>
+<li>F10: Save &amp; Exit Setup</li>
+</ul>
+</div>
+<div class="r"></div>
+<ul>
+<li>Select Item</li>
+</ul>
+
+</div>
+<div class="end">Info</div>
+</div>
+</div>
+
+
+
+<div class="bios" id="menu1">
+<h2>Phoenix - AwardBios CMOS Setup Utility<br>Standard CMOS features</h2>
+<div class="border">
+<div class="border">
+<div class="help">
+<h2>Item Help</h2>
+</div>
+<div class="main">
+<ul>
+<li class="no">Date (mm:dd:yy)
+<span>
+<select name="kuukausi">
+<option value="Jan">Jan</option>
+<option value="Feb">Feb</option>
+<option value="Mar">Mar</option>
+<option value="Apr">apr</option>
+<option value="May">May</option>
+<option value="Jun">Jun</option>
+<option value="Jul">Jul</option>
+<option value="Aug">Aug</option>
+<option value="Sep">Sep</option>
+<option value="Oct">Oct</option>
+<option value="Nov">Nov</option>
+<option value="Dec">Dec</option>
+</select><select name="paiva">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">10</option>
+</select><select name="vuosi">
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+</select>
+</span>
+</li>
+<li class="no">Time (hh:mm:ss)
+<span>
+<input type="text" name="tunnit" value="01" size="2" maxlength="2"><input type="text" name="minuutit" value="01" size="2" maxlength="2"><input type="text" name="sekunnit" value="01" size="2" maxlength="2">
+</span>
+</li>
+</ul>
+<ul>
+<li>IDE Primary Master <span>
+<select name="IDE Primary Master">
+<option value="None">None</option>
+<option value="Auto">Auto</option>
+<option value="User Type HDD">User Type HDD</option>
+<option value="CD-ROM">CD-ROM</option>
+<option value="LS-120">LS-120</option>
+<option value="ZIP-100">ZIP-100</option>
+<option value="MO">MO</option>
+<option value="Other ATAPI Device">Other ATAPI Device</option>
+</select>
+
+</span></li>
+<li>IDE Primary Slave <span>
+<select name="IDE Primary Slave">
+<option value="None">None</option>
+<option value="Auto">Auto</option>
+<option value="User Type HDD">User Type HDD</option>
+<option value="CD-ROM">CD-ROM</option>
+<option value="LS-120">LS-120</option>
+<option value="ZIP-100">ZIP-100</option>
+<option value="MO">MO</option>
+<option value="Other ATAPI Device">Other ATAPI Device</option>
+</select>
+
+
+</span></li>
+<li>IDE Secondary Master <span>
+<select name="IDE Secondary Master">
+<option value="None">None</option>
+<option value="Auto">Auto</option>
+<option value="User Type HDD">User Type HDD</option>
+<option value="CD-ROM">CD-ROM</option>
+<option value="LS-120">LS-120</option>
+<option value="ZIP-100">ZIP-100</option>
+<option value="MO">MO</option>
+<option value="Other ATAPI Device">Other ATAPI Device</option>
+</select>
+
+</span></li>
+<li>IDE Secondary Slave <span>
+<select name="IDE Secondary Slave">
+<option value="None">None</option>
+<option value="Auto">Auto</option>
+<option value="User Type HDD">User Type HDD</option>
+<option value="CD-ROM">CD-ROM</option>
+<option value="LS-120">LS-120</option>
+<option value="ZIP-100">ZIP-100</option>
+<option value="MO">MO</option>
+<option value="Other ATAPI Device">Other ATAPI Device</option>
+</select>
+
+
+</span></li>
+</ul>
+<ul>
+<li class="no">Drive A <span>[1.44M, 3.5in]</span></li>
+<li class="no">Drive B <span>[None]</span></li>
+<li class="no">Floppy 3 Mode support <span><select name="floppy3"><option value="Disabled">Disabled</option><option value="Enabled">Enabled</option></select></span></li>
+</ul>
+
+<ul>
+<li class="no">Video <span><select name="video"><option value="EGA/VGA">EGA/VGA</option><option value="Enabled">Enabled</option></select></span></li>
+<li class="no">Video <span><select name="halt"><option value="All Errors">All Errors</option><option value="Enabled">Enabled</option></select></span></li>
+</ul>
+
+<ul class="info">
+<li>Base Memory <span>640K</span></li>
+<li>Extended Memory <span>523264K</span></li>
+<li>Total Memory <span>524288K</span></li>
+</ul>
+</div>
+</div>
+<div class="menu">
+<ul>
+<li>:Move</li>
+<li>Enter:Select</li>
+<li>+/-/PU/PD:Value</li>
+<li>F10:Save</li>
+<li>Esc:Exit</li>
+<li>F1:General Help</li>
+<li>F5: Previous Values</li>
+<li>F6: Fail-Safe Defaults</li>
+<li>F7: Optimized Defaults</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+
+<div class="bios" id="menu2" style="display: block;">
+<h2>Phoenix - AwardBios CMOS Setup Utility<br>Advanced BIOS features</h2>
+<div class="border">
+<div class="border">
+<div class="help">
+<h2>Item Help</h2>
+</div>
+<div class="main">
+<ul>
+<li class="no">Anti-Virus Protection
+<span>
+<select name="antivir">
+<option value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">CPU L1 &amp; L2 Cache
+<span>
+<select name="l1l2cache">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">CPU Hyper-Threading
+<span>
+<select name="hyper-threading">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">CPU L2 Cache ECC Checking
+<span>
+<select name="L2ECC">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Quick Power ON Self Test
+<span>
+<select name="QuickPowerOn">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<!--
+<li class="no">Hard Disk Boot Priority <span><a href="">Press Enter</a></span>
+</li>
+-->
+
+<li class="no">First Boot Device
+<span>
+<select name="FirstBoot">
+<option selected="selected" value="Floppy">Floppy</option>
+<option value="HDD-0">HDD-0</option>
+<option value="HDD-1">HDD-1</option>
+<option value="HDD-2">HDD-2</option>
+<option value="HDD-3">HDD-3</option>
+<option value="USB">USB</option>
+<option value="CDROM">CDROM</option>
+<option value="LAN">LAN</option>
+<option value="LS/ZIP">LS/ZIP</option>
+</select>
+</span>
+</li>
+
+<li class="no">Second Boot Device
+<span>
+<select name="SecondBoot">
+<option value="Floppy">Floppy</option>
+<option value="HDD-0">HDD-0</option>
+<option value="HDD-1">HDD-1</option>
+<option value="HDD-2">HDD-2</option>
+<option value="HDD-3">HDD-3</option>
+<option selected="selected" value="USB">USB</option>
+<option value="CDROM">CDROM</option>
+<option value="LAN">LAN</option>
+<option value="LS/ZIP">LS/ZIP</option>
+</select>
+</span>
+</li>
+
+<li class="no">Third Boot Device
+<span>
+<select name="ThirdBoot">
+<option value="Floppy">Floppy</option>
+<option value="HDD-0">HDD-0</option>
+<option value="HDD-1">HDD-1</option>
+<option value="HDD-2">HDD-2</option>
+<option value="HDD-3">HDD-3</option>
+<option value="USB">USB</option>
+<option selected="selected" value="LAN">LAN</option>
+<option value="CDROM">CDROM</option>
+<option value="LS/ZIP">LS/ZIP</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Boot Other Device
+<span>
+<select name="BootOther">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Boot Up Floppy Seek
+<span>
+<select name="BootUpFloppySeek">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Boot Up Numlock Status
+<span>
+<select name="BootUpNumlockStatus">
+<option value="On">On</option>
+<option value="Off">Off</option>
+</select>
+</span>
+</li>
+
+<li class="no">Security Option
+<span>
+<select name="SecurityOption">
+<option value="Setup">Setup</option>
+<option value="System">System</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Report No FDD For Os
+<span>
+<select name="ReportNoFDD">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</span>
+</li>
+
+<li class="no">Delay IDE Initial (Secs)
+<span>
+<select name="DelayIDE">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+</span>
+</li>
+
+
+
+<li class="no">Disable Unused PCI Clock
+<span>
+<select name="DisableUnusedPCIClock">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</span>
+</li>
+
+<li class="no">Report No FDD For Os
+<span>
+<select name="ReportNoFDD">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</span>
+</li>
+
+<li class="no">Full Screen LOGO Show
+<span>
+<select name="FullScreenLogo">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+</ul>
+
+
+
+
+</div>
+</div>
+<div class="menu">
+<ul>
+<li>:Move</li>
+<li>Enter:Select</li>
+<li>+/-/PU/PD:Value</li>
+<li>F10:Save</li>
+<li>Esc:Exit</li>
+<li>F1:General Help</li>
+<li>F5: Previous Values</li>
+<li>F6: Fail-Safe Defaults</li>
+<li>F7: Optimized Defaults</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="bios" id="menu3">
+<h2>Phoenix - AwardBios CMOS Setup Utility<br>Advanced Chipset features</h2>
+<div class="border">
+<div class="border">
+<div class="help">
+<h2>Item Help</h2>
+</div>
+<div class="main">
+<ul>
+<li class="no">DRAM Timing Selectable
+<span>
+<select name="DRAMTimingSelectable">
+<option value="Auto">Auto</option>
+<option value="Manual">Manual</option>
+</select>
+</span>
+</li>
+
+<li class="no">CAS Latency Time
+<span>
+<select id="CASLatencyTime" name="CASLatencyTime">
+<option value="3">3</option>
+<option value="2">2</option>
+</select>
+</span>
+</li>
+
+<li class="no">Act. to Precharge Delay
+<span>
+<select id="PrechargeDelay" name="PrechargeDelay">
+<option value="15">15</option>
+</select>
+</span>
+</li>
+
+<li class="no">RAS to CAS Delay
+<span>
+<select id="RAStoCASDelay" name="RAStoCASDelay">
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+</span>
+</li>
+
+<li class="no">RAS Precharge Time
+<span>
+<select id="RASPrechageTime" name="RASPrechargeTime">
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+</span>
+</li>
+
+<li class="no">Memory Hole At 15M-16M
+<span>
+<select name="MemoryHole">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">System Bios Cacheable
+<span>
+<select name="SystemBiosCacheable">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Video Bios Cacheable
+<span>
+<select name="VideoBiosCacheable">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+</ul>
+
+
+
+
+</div>
+</div>
+<div class="menu">
+<ul>
+<li>:Move</li>
+<li>Enter:Select</li>
+<li>+/-/PU/PD:Value</li>
+<li>F10:Save</li>
+<li>Esc:Exit</li>
+<li>F1:General Help</li>
+<li>F5: Previous Values</li>
+<li>F6: Fail-Safe Defaults</li>
+<li>F7: Optimized Defaults</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="bios" id="menu4">
+<h2>Phoenix - AwardBios CMOS Setup Utility<br>Integrated Peripherals</h2>
+<div class="border">
+<div class="border">
+<div class="help">
+<h2>Item Help</h2>
+</div>
+<div class="main">
+<ul>
+<li class="no">IDE Bus Master
+<span>
+<select name="IDEBusMaster">
+<option value="Enabled">Enabled</option>
+<option value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">On-Chip IDE-0 Controller
+<span>
+<select name="OnChipIde0Controller">
+<option value="Enabled">Enabled</option>
+<option value="Disabled" selected="selected">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">On-Chip IDE-1 Controller
+<span>
+<select name="OnChipIde1Controller">
+<option value="Enabled">Enabled</option>
+<option value="Disabled" selected="selected">Disabled</option>
+</select>
+</span>
+</li>
+<!--
+<li class="no">SATA Mode
+<span>
+<select name="SATAMode">
+<option value="IDE">IDE</option>
+<option value="RAID">RAID</option>
+<option value="AHCI">AHCI</option>
+</select>
+</span>
+</li>
+
+<li class="no">On-Chip Serial ATA
+<span>
+<select name="OnChipSerialATA">
+<option value="Auto">Auto</option>
+<option value="Disabled">Disabled</option>
+<option value="Combined Mode">Combined Mode</option>
+<option value="Enhanced Mode">Enhanced Mode</option>
+<option value="SATA Only">SATA Only</option>
+</select>
+</span>
+</li>
+
+<li class="no">PATA IDE Mode
+<span>
+<select name="PATAIDEMode">
+<option value="Primary">Primary</option>
+<option value="Secondary">Secondary</option>
+</select>
+</span>
+</li>
+-->
+<li class="no">OnChip USB Controller
+<span>
+<select name="OnChipUSBController">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">OnChip USB 2.0 Controller
+<span>
+<select name="OnChipUSB2Controller">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">USB Keyboard Support Via
+<span>
+<select name="USBKeyboardSUpport">
+<option value="OS">OS</option>
+<option value="Bios">Bios</option>
+</select>
+</span>
+</li>
+
+<li class="no">USB Mouse Support Via
+<span>
+<select name="USBMouseSUpport">
+<option value="OS">OS</option>
+<option value="Bios">Bios</option>
+</select>
+</span>
+</li>
+
+<li class="no">OnChip Audio Controller
+<span>
+<select name="OnChipAudioController">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Onboard FDD Controller
+<span>
+<select name="OnboardFDDController">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Onboard Serial Port 1
+<span>
+<select name="OnboardSerialPort2">
+<option value="Auto">Auto</option>
+<option selected="selected" value="Disabled">Disabled</option>
+<option value="3F8/IRQ4">3F8/IRQ4</option>
+<option value="2F8/IRQ3">2F8/IRQ3</option>
+<option value="3E8/IRQ4">3E8/IRQ4</option>
+<option value="2E8/IRQ3">2E8/IRQ3</option>
+</select>
+</span>
+</li>
+
+<li class="no">Onboard Serial Port 2
+<span>
+<select name="OnboardSerialPort2">
+<option value="Auto">Auto</option>
+<option selected="selected" value="Disabled">Disabled</option>
+<option value="3F8/IRQ4">3F8/IRQ4</option>
+<option value="2F8/IRQ3">2F8/IRQ3</option>
+<option value="3E8/IRQ4">3E8/IRQ4</option>
+<option value="2E8/IRQ3">2E8/IRQ3</option>
+</select>
+</span>
+</li>
+
+<li class="no">Onboard Parallel Port
+<span>
+<select name="OnboardParallelPort">
+<option value="378/IRQ7">378/IRQ7</option>
+<option value="278/IRQ5">278/IRQ5</option>
+<option value="3BC/IRQ7">3BC/IRQ7</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Parallel Port Mode
+<span>
+<select name="ParallelPortMode">
+<option value="Normal">Normal</option>
+<option value="SPP">SPP</option>
+<option value="EPP">EPP</option>
+<option value="ECP">ECP</option>
+<option value="ECP+EPP">ECP+EPP</option>
+</select>
+</span>
+</li>
+
+<li class="no">EPP Mode Select
+<span>
+<select name="EPPModeSelect">
+<option value="EPP1.7">EPP1.7</option>
+<option value="EPP1.9">EPP1.9</option>
+</select>
+</span>
+</li>
+
+<li class="no">ECP Mode Use DMA
+<span>
+<select name="ECPModeUSeDMA">
+<option value="1">1</option>
+<option value="3">3</option>
+</select>
+</span>
+</li>
+
+
+
+<li class="no">IEEE 1394 Controller
+<span>
+<select name="IEEE1394Controller">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Onboard LAN Controller
+<span>
+<select name="OnboardLANController">
+<option value="Enabled">Enabled</option>
+<option selected="selected" value="Disabled">Disabled</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">LAN Boot ROM
+<span>
+<select name="LAN Boot ROM">
+<option selected="selected" value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+</ul>
+
+
+
+
+</div>
+</div>
+<div class="menu">
+<ul>
+<li>:Move</li>
+<li>Enter:Select</li>
+<li>+/-/PU/PD:Value</li>
+<li>F10:Save</li>
+<li>Esc:Exit</li>
+<li>F1:General Help</li>
+<li>F5: Previous Values</li>
+<li>F6: Fail-Safe Defaults</li>
+<li>F7: Optimized Defaults</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="bios" id="menu5">
+<h2>Phoenix - AwardBios CMOS Setup Utility<br>Power Management Setup</h2>
+<div class="border">
+<div class="border">
+<div class="help">
+<h2>Item Help</h2>
+</div>
+<div class="main">
+<ul>
+
+<li class="no">ACPI Suspend Type
+<span>
+<select name="ACPI Suspend Type">
+<option value="S1(PowerOn-Suspend)">S1(PowerOn-Suspend)</option>
+<option value="S3(Suspend-To-RAM)">S3(Suspend-To-RAM)</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Resume by USB From S3
+<span>
+<select name="ResumebyUSBFromS3">
+<option value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">Power Button Function
+<span>
+<select name="PowerButtonFunction">
+<option value="Delay 4 Sec.">Delay 4 Sec.</option>
+<option value="Instant-Off">Instant-Off</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">CPU THRM-Throttling
+<span>
+<select name="CPUTHRM-Throttling">
+<option value="50%">50%</option>
+</select>
+</span>
+</li>
+
+
+<li class="no">WakeUp by PME# of PCI
+<span>
+<select name="WakeUPbyPMEofPCI">
+<option value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">WakeUp by Onboard LAN
+<span>
+<select name="WakeUPbyOnboardLAN">
+<option value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">WakeUp by Alarm
+<span>
+<select name="WakeUpbyAlarm">
+<option value="Disabled">Disabled</option>
+<option value="Enabled">Enabled</option>
+</select>
+</span>
+</li>
+
+<li class="no">Date(of Month) Alarm
+<span>
+<input type="text" name="DateofMonthAlarm" value="0" size="3" maxlength="3">
+</span>
+</li>
+
+<li class="no">Time (hh:mm:ss) Alarm
+<span>
+<input type="text" name="TimeAlarm" value="0" size="10" maxlength="10">
+</span>
+</li>
+
+
+<li class="no">POWER ON Function
+<span>
+<select name="PowerOnFunction">
+<option value="Password">Password</option>
+<option value="Hot Key">Hot Key</option>
+<option value="Mouse Left">Mouse Left</option>
+<option value="Mouse Right">Mouse Right</option>
+<option value="Any KEY">Any KEY</option>
+<option selected="selected" value="Button Only">Button Only</option>
+<option value="Keyboard 98">Keyboard 98</option>
+</select>
+</span>
+</li>
+
+<li class="no">KB Power ON Password
+<span>
+<input type="password" name="KBPowerONPassword" value="" size="10" maxlength="10">
+</span>
+</li>
+
+<li class="no">Hot Key Power ON
+<span>
+<select name="HotKeyPowerOn">
+<option value="CTRL-F1">CTRL-F1</option>
+<option value="CTRL-F2">CTRL-F2</option>
+<option value="CTRL-F3">CTRL-F3</option>
+<option value="CTRL-F4">CTRL-F4</option>
+<option value="CTRL-F5">CTRL-F5</option>
+<option value="CTRL-F6">CTRL-F6</option>
+<option value="CTRL-F7">CTRL-F7</option>
+<option value="CTRL-F8">CTRL-F8</option>
+<option value="CTRL-F9">CTRL-F9</option>
+<option value="CTRL-F10">CTRL-F10</option>
+<option value="CTRL-F11">CTRL-F11</option>
+<option value="CTRL-F12">CTRL-F12</option>
+</select>
+</span>
+</li>
+
+<li class="no">Restore On AC Power Loss
+<span>
+<select name="RestoreOnACPowerLoss">
+<option value="Power Off">Power Off</option>
+<option value="Power On">Power On</option>
+<option value="Last State">Last State</option>
+</select>
+</span>
+</li>
+</ul>
+
+
+</div>
+</div>
+<div class="menu">
+<ul>
+<li>:Move</li>
+<li>Enter:Select</li>
+<li>+/-/PU/PD:Value</li>
+<li>F10:Save</li>
+<li>Esc:Exit</li>
+<li>F1:General Help</li>
+<li>F5: Previous Values</li>
+<li>F6: Fail-Safe Defaults</li>
+<li>F7: Optimized Defaults</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body></html>

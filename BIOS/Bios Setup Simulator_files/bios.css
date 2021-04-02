@@ -1,0 +1,155 @@
+.bios {
+ color: white;
+ background-color: #00009c;
+ font-weight: 900;
+ height: 100%;
+ width: 100%;
+ min-height: 100%;
+ min-width: 100%;
+ padding: 2px;
+ font-family: "Courier New", Courier, monospace;
+}
+
+.bios ul {
+ list-style-type: none;
+ margin: 0;
+ padding-left: 1em;
+ padding-right: 1em;
+ padding-bottom: 1em;
+ padding-top: 1em;
+}
+
+a:link, a:visited {
+ color: white;
+ text-decoration: none;
+}
+
+a:hover {
+ background-color: red;
+}
+
+.bios h2 {
+ padding: 0;
+ margin: 0;
+ border: 0;
+ text-align: center;
+ font-weight: 900;
+ font-size: 1.2em;
+}
+
+.border {
+ border-left: 2px solid white;
+ border-right: 2px solid white;
+ border-top: 1px solid white;
+ border-bottom: 1px solid white;
+ padding: 2px;
+}
+
+.menu {
+ text-align: center;
+}
+
+.menu ul li {
+ display: inline;
+ padding-left: 2em; 
+ 
+}
+
+.left {
+ border: 1px solid white;
+ width: 49%;
+ float: left;
+ border-right: 2px solid white;
+}
+
+
+.right ul li, .left ul li, .main ul li {
+ list-style-image: url("lista.png")
+}
+
+.right {
+ border: 1px solid white;
+}
+
+.right ul li, .left ul li, .main ul li {
+ margin-left: 2em;
+ line-height: 1.5em;
+}
+
+.left a:link, .left a:visited, .right a:link, .right a:visited {
+ color: yellow;
+}
+
+.border .border {
+ padding: 0px;
+}
+
+.bottom {
+ clear: both;
+ border-left: 1px solid white;
+ border-right: 1px solid white;
+ border-bottom: 1px solid white;
+}
+
+.l {
+ width: 49%;
+ float: left;
+}
+
+.r ul li {
+ margin-left: 1em;
+}
+
+.main {
+ width: 85%;
+ position: relative;
+}
+
+.border>.main {
+ border-right: 2px solid white;
+ width: 65%;
+ position: relative;
+}
+
+.help {
+ float: right;
+ width: 35%;
+}
+
+.help h2 {
+ padding: 1em;
+ border-bottom: 1px solid white;
+}
+
+.end {
+ color: yellow;
+ text-align: center;
+ clear: both;
+ border-left: 1px solid white;
+
+}
+
+#menu1, #menu2, #menu3, #menu4, #menu5 {
+ display: none;
+}
+
+.bios ul .no {
+ list-style-type: none; 
+ list-style-image: none;
+}
+
+.info {
+ color: #7070ff;
+}
+
+span {
+	position: absolute;
+	right: 1em;
+	width: 40%;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.clear {
+ clear: both;
+}
