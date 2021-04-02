@@ -316,7 +316,7 @@ def shell():
                 system("python3 main.py")
                 continue
             elif cmd == "ramdisk":
-                Cmds.ramdisk()
+                Cmds.ramdisk("")
                 continue
             elif cmd == "download":
                 rota = str(input("Hostname Server Https: "))
