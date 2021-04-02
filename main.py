@@ -298,7 +298,7 @@ def shell():
     system("title CONSOLE")
     system("cls")
     Main.Build(input(""))
-    print("\nWelcome to CONSOLE - Sen Kiudokima (C) 2021 mhttps://github.com/Felipe-21/Console\n"), sleep(3)
+    print("\nWelcome to CONSOLE - Sen Kiudokima (C) 2021 https://github.com/Felipe-21/Console\n"), sleep(3)
     while True:
             cmd: str = input("localhost@desktop:~$ ").strip().lower()
             if cmd == "far" or cmd == "commander":
