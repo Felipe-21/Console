@@ -220,7 +220,7 @@ class Main:
             print("System        5kb      Origem")
             print("Command       10kb     System")
             print("======================================================\n\n")
-            print("Done processing startup file(s) \033[32mlocalhost@desktopUser:\main.py\033[m")
+            print("Done processing startup file(s) localhost@desktopUser:\main.py")
             print("Type Help to get support on commands and navegation.\n")
         except:
             Main.BIOS()
@@ -300,7 +300,7 @@ def shell():
     Main.Build(input(""))
     print("\nWelcome to \033[31mCONSOLE\033[m - Sen Kiudokima (C) 2021 \033[35mhttps://github.com/Felipe-21/Console\033[m\n"), sleep(3)
     while True:
-            cmd: str = input("\033[32mlocalhost@desktop:~$\033[m ").strip().lower()
+            cmd: str = input("localhost@desktop:~$ ").strip().lower()
             if cmd == "far" or cmd == "commander":
                 Cmds.FarShell()
                 continue
