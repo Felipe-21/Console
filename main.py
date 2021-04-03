@@ -1,6 +1,8 @@
+import urllib
 from time import sleep
 from os import system, chdir, startfile
 from random import randint
+from urllib.request import urlopen
 
 __version__ = "0.0.1"
 __license__ = """              Apache License
@@ -328,7 +330,7 @@ def shell():
             elif cmd.startswith("lua"):
                 cmd = cmd.replace("lua ", "")
                 cmd = cmd.replace("lua", "")
-                system(f"Lua\lua54.exe {cmd}")
+                system(f"LiveDOS\Lua\lua54.exe {cmd}")
             elif cmd == "update":
                 update()
                 continue
