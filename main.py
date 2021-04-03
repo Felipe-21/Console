@@ -2,7 +2,7 @@ from time import sleep
 from os import system, chdir, startfile
 from random import randint
 
-__license__ = """Apache License
+__license__ = """              Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -190,7 +190,7 @@ __license__ = """Apache License
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright [2021] [Felipe Souza Pereira de Lima]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -302,7 +302,7 @@ def shell():
     while True:
             cmd: str = input("localhost@desktop:~$ ").strip().lower()
             if cmd == "far" or cmd == "commander":
-                Cmds.FarShell()
+                Cmds.FarShell("")
                 continue
             elif cmd == "mirror":
                 chdir('liveDOS')
@@ -310,7 +310,7 @@ def shell():
                 chdir('..')
                 continue
             elif cmd == "reboot":
-                Cmds.command()
+                Cmds.command("")
                 continue
             elif cmd == "command":
                 system("python3 main.py")
@@ -326,7 +326,7 @@ def shell():
                 Cmds.cpi("")
                 continue
             elif cmd == "help":
-                Cmds.helpy()
+                Cmds.helpy("")
                 continue
             elif cmd == "mode":
                 Cmds.mode("")
