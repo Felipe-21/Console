@@ -1,7 +1,7 @@
 from time import sleep
 from os import system, chdir, startfile
 from random import randint
-
+\
 __version__ = "0.0.1"
 __license__ = """              Apache License
                            Version 2.0, January 2004
