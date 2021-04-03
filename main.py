@@ -296,15 +296,6 @@ class Ethernet:
         system(f"bitsadmin /transfer myDownload /download /priority normal {host} {path}")
     def lynx(host):
         system(f"lynx.exe {host}")
-class TimeTrustedDimensions:
-    def __init__(self):
-        return self
-
-    def Setlocation(time, date, location):
-        """time: hora, minuto, segundo
-            data: dia, mês, ano
-            localiazação: x, y, z"""
-        get_date = time, date
 def update():
     print("Preparing System to recognize updates of Github.com. . ."), sleep(randint(6, 13))
     print("If you don't have Git in your computer this operation can't realized with sucessfuly")
