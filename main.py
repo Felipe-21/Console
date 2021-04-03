@@ -306,6 +306,7 @@ class TimeTrustedDimensions:
 def update():
     print("Preparing System to recognize updates of Github.com. . ."), sleep(randint(6, 13))
     print("If you don't have Git in your computer this operation can't realized with sucessfuly")
+    print("https://git-scm.com/downloads")
     input("\nPress ENTER if you have Git installed in your computer and continue. . .")
     system("git pull")
 
