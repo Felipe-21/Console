@@ -295,6 +295,12 @@ class Ethernet:
     def lynx(host):
         system(f"lynx.exe {host}")
 
+def update():
+    print("Preparing System to recognize updates of Github.com. . ."), sleep(randint(6, 13))
+    print("If you don't have Git in your computer this operation can't realized with sucessfuly")
+    input("\nPress ENTER if you have Git installed in your computer and continue. . .")
+    system("git pull")
+
 def shell():
     system("title CONSOLE")
     system("cls")
@@ -310,6 +316,13 @@ def shell():
                 Cmds.lynx("https://github.com/Felipe-21/Console")
                 chdir('..')
                 continue
+            elif cmd.startswith("lua"):
+                cmd = cmd.replace("lua ", "")
+                cmd = cmd.replace("lua", "")
+                system(f"Lua\lua54.exe {cmd}")
+            elif cmd == "update":
+                update()
+                continue
             elif cmd == "reboot":
                 Cmds.command("")
                 continue
@@ -322,7 +335,11 @@ def shell():
             elif cmd == "download":
                 rota = str(input("Hostname Server Https: "))
                 pafer = str(input("Path to extract: "))
-                Ethernet.download(rota, pafer)
+                if rota == "mirror":
+                    tag = input("Github Tag: ")
+                    Ethernet.download(f"https://github.com/Felipe-21/Console/releases/download/{tag}/ConsoleSetup.zip", pafer)
+                else:
+                    Ethernet.download(rota, pafer)
             elif cmd == "cpi":
                 Cmds.cpi("")
                 continue
